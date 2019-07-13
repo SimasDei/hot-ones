@@ -7,7 +7,7 @@ import fire from '../images/fire.svg';
 const style = {
   meter: {
     position: 'relative',
-    width: '20%',
+    width: '30%',
   },
   level: {
     position: 'absolute',
