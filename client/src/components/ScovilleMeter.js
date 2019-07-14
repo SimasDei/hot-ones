@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import injectSheet from 'react-jss';
 
 import Pepper from '../images/pepper.svg';
@@ -23,18 +23,15 @@ for (let i = 1; i <= 11; i++) {
 }
 levels.push(fire);
 
-class ScovilleMeter extends Component {
-  render() {
-    const { classes } = this.props;
-    return (
-      <div className={classes.meter}>
-        <img className={classes.level} src={Pepper} alt="pepperoni" />
-        {levels.map(level => (
-          <img className={classes.level} src={level} alt="what" key={level} />
-        ))}
-      </div>
-    );
-  }
-}
+const ScovilleMeter = ({ classes }) => {
+  return (
+    <div className={classes.meter}>
+      <img className={classes.level} src={Pepper} alt="pepperoni" />
+      {levels.map(level => (
+        <img className={classes.level} src={level} alt="what" key={level} />
+      ))}
+    </div>
+  );
+};
 
 export default injectSheet(style)(ScovilleMeter);
